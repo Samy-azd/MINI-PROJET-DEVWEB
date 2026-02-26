@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: #333;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  color: #222;
+}
+
+h1 span {
+  color: #d4a017;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* panneau de config */
+.config-panel {
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  background: #fefefe;
+  border: 1px solid #e0d9c8;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.config-panel h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #b8960c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.form-group input {
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #d4a017;
+}
+
+/* chips objectifs */
+.objectifs-group {
+  margin-bottom: 1rem;
+}
+
+.objectifs-group p {
+  font-size: 0.8rem;
+  color: #555;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.objectifs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.objectif-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fafafa;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  user-select: none;
+  color: #444;
+}
+
+.objectif-chip:hover {
+  border-color: #d4a017;
+}
+
+.objectif-chip.active {
+  background: #fdf3d0;
+  border-color: #d4a017;
+  color: #7a5c00;
+}
+
+.objectif-chip input[type="checkbox"] {
+  accent-color: #d4a017;
+}
+
+/* bouton */
+.btn-generate {
+  width: 100%;
+  padding: 0.7rem;
+  background: #d4a017;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-generate:hover {
+  background: #b8860b;
+}
+
+.btn-generate:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* erreurs */
+.error-msg {
+  color: #c0392b;
+  font-size: 0.82rem;
+  margin-bottom: 0.6rem;
+}
+
+/* tableau */
+.table-container {
+  max-width: 750px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.table-container h2 {
+  font-size: 1rem;
+  color: #b8960c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e5e0d0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead {
+  background: #fdf3d0;
+}
+
+th {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #7a5c00;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e6d48e;
+}
+
+td {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0ece0;
+  color: #444;
+}
+
+tbody tr:hover {
+  background: #fffdf3;
+}
+
+/* bouton export */
+.btn-export {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #fff;
+  color: #7a5c00;
+  border: 1px solid #d4a017;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-export:hover {
+  background: #fdf3d0;
+}
+
+.export-wrapper {
+  text-align: center;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .config-panel {
+    padding: 1rem;
+  }
+}
